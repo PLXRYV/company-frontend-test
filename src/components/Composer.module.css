@@ -1,0 +1,76 @@
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 16px 14px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.field {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 44px;
+  max-height: 160px;
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-radius: 22px;
+  background: var(--surface-2);
+  resize: none;
+  outline: none;
+  line-height: 1.4;
+  transition: border-color 0.15s;
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+}
+
+.textarea::placeholder {
+  color: var(--text-3);
+}
+
+.counter {
+  position: absolute;
+  right: 14px;
+  bottom: -2px;
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.send {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  transition:
+    background 0.15s,
+    transform 0.1s,
+    opacity 0.15s;
+}
+
+.send:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.send:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.send:disabled {
+  opacity: 0.4;
+}
+
+.send svg {
+  margin-left: -2px;
+}

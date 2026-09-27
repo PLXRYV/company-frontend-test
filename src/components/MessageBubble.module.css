@@ -1,0 +1,101 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  max-width: min(560px, 78%);
+  animation: appear 0.16s ease-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+.in {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.out {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.bubble {
+  position: relative;
+  padding: 7px 10px 7px 12px;
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-bubble);
+  overflow-wrap: anywhere;
+}
+
+.in .bubble {
+  background: var(--bubble-in);
+  color: var(--bubble-in-text);
+  border-bottom-left-radius: 6px;
+}
+
+.out .bubble {
+  background: var(--bubble-out);
+  color: var(--bubble-out-text);
+  border-bottom-right-radius: 6px;
+}
+
+.failed {
+  opacity: 0.75;
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+/* Время «обтекается» текстом, как в мессенджерах */
+.meta {
+  float: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin: 6px 0 -4px 12px;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--text-3);
+  user-select: none;
+}
+
+.out .meta {
+  color: var(--bubble-out-meta);
+}
+
+.status {
+  display: inline-flex;
+}
+
+.read {
+  color: #b6f0ff;
+}
+
+.alert {
+  color: #ffd2d2;
+}
+
+.in .alert {
+  color: var(--danger);
+}
+
+.retry {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--danger);
+  font-size: 12px;
+}
+
+.retry:hover {
+  background: var(--danger-soft);
+}

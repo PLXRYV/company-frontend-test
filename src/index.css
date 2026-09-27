@@ -1,0 +1,135 @@
+:root {
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --accent: #3d6bff;
+  --accent-hover: #2f5cf0;
+  --accent-soft: rgba(61, 107, 255, 0.12);
+  --accent-gradient: linear-gradient(135deg, #3d6bff 0%, #8a4dff 100%);
+
+  --bg: #eef0f4;
+  --surface: #ffffff;
+  --surface-2: #f5f6f8;
+  --surface-hover: #f0f2f5;
+  --surface-active: #e6ebff;
+  --chat-bg: #e9ecf2;
+
+  --text: #0d0f14;
+  --text-2: #6b7280;
+  --text-3: #9aa1ad;
+  --border: #e3e6ec;
+
+  --bubble-in: #ffffff;
+  --bubble-in-text: #0d0f14;
+  --bubble-out: #3d6bff;
+  --bubble-out-text: #ffffff;
+  --bubble-out-meta: rgba(255, 255, 255, 0.75);
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --danger-soft: rgba(239, 68, 68, 0.1);
+
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 18px;
+  --shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  --shadow-bubble: 0 1px 1px rgba(15, 23, 42, 0.06);
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --accent: #5b80ff;
+  --accent-hover: #6f8fff;
+  --accent-soft: rgba(91, 128, 255, 0.16);
+
+  --bg: #0b0c10;
+  --surface: #16181d;
+  --surface-2: #1d2027;
+  --surface-hover: #1f232b;
+  --surface-active: #232a3f;
+  --chat-bg: #0f1115;
+
+  --text: #eceef2;
+  --text-2: #9ba1ad;
+  --text-3: #6b7280;
+  --border: #262a33;
+
+  --bubble-in: #1f232b;
+  --bubble-in-text: #eceef2;
+  --bubble-out: #4a6fff;
+  --bubble-out-text: #ffffff;
+
+  --danger-soft: rgba(239, 68, 68, 0.16);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --shadow-bubble: none;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,84 @@
+.form {
+  margin: 0 12px 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--radius-l);
+  background: var(--surface-2);
+  animation: slideIn 0.18s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--text-2);
+}
+
+.close:hover {
+  background: var(--surface-hover);
+}
+
+.input {
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.input::placeholder {
+  color: var(--text-3);
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.submit {
+  height: 42px;
+  border: none;
+  border-radius: var(--radius-m);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+}
